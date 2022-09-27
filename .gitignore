@@ -4,10 +4,10 @@ requeriments.txt
 
 apps/__pycache__
 apps/inicio/__pycache__
-apps/inicio/migrations/__pycache__
+apps/inicio/migrations/
 apps/personal/__pycache__
-apps/personal/migrations/__pycache__
+apps/personal/migrations/
 apps/publicaciones/__pycache__
-apps/publicaciones/migrations/__pycache__
+apps/publicaciones/migrations/
 
 laboratoriovial/__pycache__

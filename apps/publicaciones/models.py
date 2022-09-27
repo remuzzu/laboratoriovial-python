@@ -12,7 +12,7 @@ class Publicacion(models.Model):
    # id = models.AutoField(primary_key = True)
    # id no haria falta definirlo, porque por defecto django lo define tal cual como esta arriba
    titulo = models.CharField(max_length=200)
-   otrosAutores = models.CharField(max_length=200)
-   congreso = models.ForeignKey(Congreso, null=True, blank=True, on_delete=models.CASCADE)
+   otrosAutores = models.CharField(max_length=200, blank=True)
+   congreso = models.ForeignKey(Congreso, null=True, on_delete=models.CASCADE)
    autor = models.ManyToManyField(Persona)
 

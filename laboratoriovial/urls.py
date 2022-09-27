@@ -13,19 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from unicodedata import name
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
-'''
-La ER en este caso NO tienen un $ (caracter asignado a fin-de-cadena) 
-pero incluye una barra diagonal.
-Corta cualquier parte de la URL que coincida hasta este punto (publicaciones/) 
-Envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.
-'''
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('inicio.urls')),
-    #path('publicaciones/', include('publicaciones.urls')),
+    path('home', include('apps.inicio.urls'), name="inicio"),   # Los name los vamos a usar mucho en las templates
+    path('publicaciones/', include('apps.publicaciones.urls'), name="publicaciones"),
+    path('personal/', include('apps.personal.urls'), name="publicaciones"),
 ]
