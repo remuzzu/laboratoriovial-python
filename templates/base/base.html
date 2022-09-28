@@ -1,26 +1,26 @@
 <!DOCTYPE html>
+{% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 
 <head>
-   <meta charset="utf-8">
-   <title>{% block title %} Titulo {% endblock %}</title>
-   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-   <meta content="" name="keywords">
-   <meta content="" name="description">
+    {% block head %}
+    {% include 'base/head.html' %}
+    <title>{% block title %} Laboratorio Vial {% endblock %}</title>
+    {% endblock %}
 </head>  
 
 <body>
     {% block nav %}
-    Soy la barra de navegacion
+    {% include 'base/navbar.html' %}
     {% endblock %}
     
     {% block content %} 
-    Soy el contenido base
+    <h2>Soy el contenido base</h2>
     {% endblock %}
 </body>
 
 {% block footer %} 
-Soy el footer base
+{% include 'base/footer.html' %}
 {% endblock %}
 
 </html>

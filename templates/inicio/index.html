@@ -1,7 +1,11 @@
 {% extends 'base/base.html' %}
 
-<main id="main">
+{% load static %}
 
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<main id="main">
     <!--==========================
           About Us Section (Curso de maestria)
         ============================-->
@@ -96,10 +100,10 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/img/inter-cila21-1.jpeg" alt="First slide">
+                                <img class="d-block w-100" src="{% static '/img/home/inter-cila21-1.jpeg' %}" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/inter-cila21-2.jpeg" alt="Second slide">
+                                <img class="d-block w-100" src="{% static '/img/home/inter-cila21-2.jpeg' %}" alt="Second slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -151,8 +155,8 @@
                     </p>
                 </div>
                 <div class="col-lg-6 content order-lg-1 order-1">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/tesis1.jpg" alt="">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/tesis2.jpg" alt="">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/home/tesis1.jpg' %}" alt="">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/home/tesis2.jpg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -186,7 +190,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 content order-lg-1 order-1">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/CILA1.jpg" alt="">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/home/CILA1.jpg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -220,7 +224,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6 content order-lg-1 order-1">
-                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/florencia.jpg" alt="">
+                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/home/florencia.jpg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -276,7 +280,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6 content order-lg-1 order-1">
-                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/griptester.jpg" alt="">
+                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '/img/home/griptester.jpg' %}" alt="">
                     </div>
                 </div>
             </div>
@@ -335,7 +339,7 @@
                         </p>
                     </div>
                     <div class="col-lg-6 content order-lg-1 order-1">
-                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded float-right" src="assets/img/accesit_1.jpg"
+                        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded float-right" src="{% static '/img/home/accesit_1.jpg' %}"
                             alt="">
                     </div>
                 </div>
@@ -367,10 +371,11 @@
                     </p>
                 </div>
                 <div class="col-lg-6 content order-lg-1 order-1">
-                    <img class="intro-img-xs img-fluid mb-3 mb-lg-0 rounded float-right" src="assets/img/vial2016.jpg"
+                    <img class="intro-img-xs img-fluid mb-3 mb-lg-0 rounded float-right" src="{% static '/img/home/vial2016.jpg' %}"
                         alt="">
                 </div>
             </div>
         </div>
     </section>
 </main>
+{% endblock %}
