@@ -1,12 +1,12 @@
 from django.urls import path
 from  .views import (
     index_publicaciones,
-    new_publicaciones,
-    new_Congreso
+    new_publicacion,
+    new_congress
 )
 
 urlpatterns = [
     path("index", index_publicaciones),
-    path("create", new_publicaciones),
-    path("create-congress", new_Congreso),
+    path("new", new_publicacion),
+    path("new-congress", new_congress),
 ]

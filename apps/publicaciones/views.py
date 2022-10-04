@@ -1,12 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from apps.publicaciones.forms import CongressForm
 
 # Create your views here.
 def index_publicaciones(request):
-    return HttpResponse("Estoy en el index de las publicaciones")
+    return render(request, 'publicaciones/index.html')
 
-def new_publicaciones(request):
-    return HttpResponse("Estamos listos para agregar una nueva publicacion")
+def new_publicacion(request):
+    return render(request, 'publicaciones/new.html')
 
-def new_Congreso(request):
-    return HttpResponse("Estamos listos para agregar un nuevo congreso")
+def new_congress(request):
+    if request.method == 'POST':
+        form = CongressForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('publicaciones: index')
+    else:
+        form = CongressForm()
+    return render(request, 'publicaciones/new_congress.html', {'form': form})
