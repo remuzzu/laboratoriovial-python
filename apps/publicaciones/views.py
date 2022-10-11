@@ -17,4 +17,5 @@ def new_congress(request):
         return redirect('publicaciones: index')
     else:
         form = CongressForm()
+        
     return render(request, 'publicaciones/new_congress.html', {'form': form})

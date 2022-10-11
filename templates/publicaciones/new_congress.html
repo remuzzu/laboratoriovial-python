@@ -5,5 +5,11 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-Alta de Congresos a traves de un formulario
+<form method="POST">
+   {% csrf_token %}
+   {{form.as_p}}
+   <button type="submit">Guardar</button>
+</form>
+
+
 {% endblock %}
