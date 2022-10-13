@@ -2,14 +2,15 @@
 
 {% load static %}
 
-{% block title %}Home{% endblock %}
+{% block title %} Agregar nuevo Personal {% endblock %}
 
 {% block content %}
+Formulario para agregar nuevo integrante al Personal
+<!--
 <form method="POST">
    {% csrf_token %}
    {{form.as_p}}
    <button type="submit">Guardar</button>
 </form>
-
-
+-->
 {% endblock %}

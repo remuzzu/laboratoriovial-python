@@ -7,19 +7,19 @@
         <div id="logo" class="pull-left">
             <!--<a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a>-->
             <!-- Uncomment below if you prefer to use a text logo -->
-            <h2><a href="index.php">Laboratorio Vial</a></h2>
+            <h2><a href="{% url 'home' %}">Laboratorio Vial</a></h2>
         </div>
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
                 <li class="menu-has-children"><a href="">Cursos</a>
                     <ul>
                         <li><a href="cursos.php?frm=cursos">2022</a></li>
                         <li><a href="cursos.php?frm=maestria">Maestria Vial</a></li>
                     </ul>
                 </li>
-                <li><a href="personal.php">Personal</a></li>
+                <li><a href="{% url 'index-personal' %}">Personal</a></li>
                 <li class="menu-has-children"><a href="">Actividades</a>
                     <ul>
                         <li><a href="publicaciones.php">Publicaciones</a></li>
