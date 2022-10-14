@@ -6,7 +6,13 @@ from apps.personal.forms import PersonalForm
 def index(request):
     return render(request, 'personal/index.html')
 
-def new_personal(request):
+def personal_edit(request):
+    return render(request, 'personal/editar.html')
+
+def personal_create(request):
+    return render(request, 'personal/crear.html')
+
+def form_personal(request):
     if request.method == 'POST':
         form = PersonalForm(request.POST)
         if form.is_valid():
@@ -16,4 +22,4 @@ def new_personal(request):
     else:
         form = PersonalForm()
         
-    return render(request, 'personal/new.html', {'form': form})
+    return render(request, 'personal/form.html', {'form': form})

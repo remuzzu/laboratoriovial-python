@@ -1,10 +1,8 @@
 from django.urls import path
-from  .views import (
-    index,
-    new_personal
-)
+from . import views
 
 urlpatterns = [
-    path("", index, name='personal-index'),    # Cuando esta vacio, por defecto entraria al index del personal
-    path("new", new_personal), # Los name los vamos a usar mucho en las templates
+    path("", views.index, name='personal_index'),    # Cuando esta vacio, por defecto entraria al index del personal
+    path("crear", views.personal_create, name='personal_create'),    
+    path("editar", views.personal_edit, name='personal_edit'),
 ]

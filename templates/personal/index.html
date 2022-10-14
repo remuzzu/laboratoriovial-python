@@ -5,40 +5,37 @@
 {% block title %} Lista del Personal {% endblock %}
 
 {% block content %}
-
-<div class="card">
-   <div class="card-header">
-      Lista del Personal
-   </div>
-   <div class="card-body">
-      <h4 class="card-title">Personal</h4>
-      
-      <div class="table-responsive">
-         <table class="table table-primary">
-            <thead>
-               <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Acciones</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr class="">
-                  <td scope="row">1</td>
-                  <td>Regina Muzzulini</td>
-                  <td>Editar | Borrar</td>
-               </tr>
-               <tr class="">
-                  <td scope="row">Item</td>
-                  <td>Item</td>
-                  <td>Item</td>
-               </tr>
-            </tbody>
-         </table>
+<main id="main">
+   <section id="team">
+      <div class="container wow fadeInUp">
+         <div class="table-responsive">
+            <table class="table table-primary">
+               <thead>
+                  <tr>
+                     <th scope="col">ID</th>
+                     <th scope="col">Nombre</th>
+                     <th scope="col">Acciones</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="">
+                     <td scope="row">1</td>
+                     <td>Regina Muzzulini</td>
+                     <td>Editar | Borrar</td>
+                  </tr>
+                  <tr class="">
+                     <td scope="row">Item</td>
+                     <td>Item</td>
+                     <td>Item</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
       </div>
-      
+   </section>
+</main>
 
-   </div>
 
-</div>
+
+
 {% endblock %}

@@ -1,15 +1,8 @@
 <!--==========================
 	Header (menú)
 ============================-->
-<header id="header">
+<header id="header" style="background: rgba(52, 59, 64, 0.9); padding: 20px 0; height: 72px; ">
     <div class="container">
-
-        <div id="logo" class="pull-left">
-            <!--<a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a>-->
-            <!-- Uncomment below if you prefer to use a text logo -->
-            <h2><a href="{% url 'inicio' %}">Laboratorio Vial</a></h2>
-        </div>
-
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
@@ -19,7 +12,15 @@
                         <li><a href="cursos.php?frm=maestria">Maestria Vial</a></li>
                     </ul>
                 </li>
-                <li><a href="personal.php">Personal</a></li>
+                <!--<li><a href="personal.php">Personal</a></li>-->
+                <li class="menu-has-children"><a href="">Personal</a>
+                    <ul>
+                        <li><a href="{% url 'personal_index' %}">Listado</a></li>
+                        <li><a href="{% url 'personal_create' %}">Crear</a></li>
+                        <li><a href="{% url 'personal_edit' %}">Editar</a></li>
+                    </ul>
+                </li>
+                
                 <li class="menu-has-children"><a href="">Actividades</a>
                     <ul>
                         <li><a href="publicaciones.php">Publicaciones</a></li>

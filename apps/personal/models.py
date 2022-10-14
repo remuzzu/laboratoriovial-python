@@ -7,9 +7,11 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 class Persona(models.Model):
    nombre = models.CharField(max_length=50)
+   descripcion = models.CharField(max_length=200, blank=True)
+   imagen = models.CharField(max_length=200, blank=True)
    
    def __str__(self) -> str:
-      return self.nombre
+      return '{} - {}'.format(self.nombre, self.descripcion)
 
 class PersonalForm(forms.ModelForm):
    class Meta:
