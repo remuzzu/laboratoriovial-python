@@ -5,12 +5,19 @@
 {% block title %} Editar Personal {% endblock %}
 
 {% block content %}
-Formulario para editar integrante del Personal
-<!--
-<form method="POST">
-   {% csrf_token %}
-   {{form.as_p}}
-   <button type="submit">Guardar</button>
-</form>
--->
+
+<div class="card">
+   <div class="card-header">
+      Editar información
+   </div>
+   <div class="card-body">
+      <h4 class="card-title">Datos de la persona</h4>
+      
+      {% include 'personal/form.html' %}
+   </div>
+   <div class="card-footer text-muted">
+      
+   </div>
+</div>
+
 {% endblock %}

@@ -1,13 +1,15 @@
-{% extends 'base/base.html' %}
+<!--
+   La idea es hacer un único formulario que se pueda utilizar tanto en "crear" como en "editar"
+-->
 
-{% load static %}
+<form enctype="multipart/form-data" method="POST">
+   <div class="mb-3">
+     <label for="" class="form-label">Nombre: </label>
+     
+     <input type="text"
+       class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+     <small id="helpId" class="form-text text-muted">Help text</small>
+   
+   </div>
 
-{% block title %}addPersonal{% endblock %}
-
-{% block content %}
-<form method="POST">
-   {% csrf_token %}
-   {{form.as_p}}
-   <button type="submit">Guardar</button>
 </form>
-{% endblock %}

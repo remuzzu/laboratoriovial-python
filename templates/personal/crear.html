@@ -5,7 +5,21 @@
 {% block title %} Agregar nuevo Personal {% endblock %}
 
 {% block content %}
-Formulario para agregar nuevo integrante al Personal
+
+<div class="card">
+   <div class="card-header">
+      Agregar información del nuevo Personal del Laboratorio Vial
+   </div>
+   <div class="card-body">
+      <h4 class="card-title">Datos de la persona</h4>
+      
+      {% include 'personal/form.html' %}
+   </div>
+   <div class="card-footer text-muted">
+      
+   </div>
+</div>
+
 <!--
 <form method="POST">
    {% csrf_token %}
